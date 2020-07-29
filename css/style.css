@@ -14,7 +14,6 @@ html, body {
 
 body {
     overflow-x: hidden;
-    background: black;
 }
 
 .wrapper {
@@ -119,7 +118,7 @@ body {
 
 .hero__text-wrapper {
     width: 60%;
-    padding: 8rem 2rem 3rem 0;
+    padding: 10rem 2rem 3rem 0;
 }
 
 .hero__title {
@@ -183,11 +182,15 @@ body {
 }
 
 .hero__bottom {
-    width: 100%;
-    height: 86px;
-    background: url("../img/bg.png") no-repeat center/cover;
+    width: 120%;
+    height: 200px;
+    background: #fff;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
     position: absolute;
-    bottom: 0;
+    left: -10%;
+    bottom: -100px;
+    z-index: 0;
 }
 
 .scroll-down__wrapper {
@@ -197,8 +200,9 @@ body {
     background-color: #fff;
     background-image: linear-gradient(to top, #f07a13 0%, #f3a300 100%);
     position: absolute;
-    top: -25px;
+    top: -22px;
     left: 50%;
+    margin-left: -20px;
     transition: background 0.2s;
 }
 
@@ -218,6 +222,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* instruction */
+.instruction {
+    position: relative;
+    z-index: 1;
+}
+.instruction__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.instruction__title {
+    color: #1a1a1a;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 49px;
 }
 
 /* Medium devices (tablets, 768px and up) */
