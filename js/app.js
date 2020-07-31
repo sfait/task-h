@@ -1,3 +1,37 @@
+function showPage() {
+    let count = 0;
+    let counter = setInterval(function() {
+        if(count < 101) {
+            $('.count').text(count + '%');
+            $('.loader-left').css('width', count/2 + '%');
+            $('.loader-right').css('width', count/2 + '%');
+            count++;
+        } else {
+            $('.open').css('display', 'none');
+            clearInterval(counter);
+        }
+    }, 80)
+}
+
+function changeTitle() {
+    const message = "Wróć na stronę";
+    let original;
+
+    window.addEventListener("focus", function() {
+        if (original) {
+            document.title = original;
+        }
+    })
+
+    window.addEventListener("blur", function() {
+        const title = document.title;
+        if (title != message) {
+            original = title;
+        }
+        document.title = message;
+    })
+}
+
 function showHamburgerMenu() {
     const hamburger = document.querySelector(".hamburger");
     const nav = document.querySelector(".navigation");
@@ -20,7 +54,9 @@ function showHamburgerMenu() {
 }
 
 const init = function() {
-    // showHamburgerMenu();
+    showPage();
+    changeTitle();
+    showHamburgerMenu();
 };
 
 document.addEventListener("DOMContentLoaded", init);
