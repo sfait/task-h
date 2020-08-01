@@ -836,7 +836,113 @@ body {
 }
 
 /* login and registration form */
+.popup {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
 
+.popup__wrapper {
+    max-width: 800px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.popup__photo {
+    width: 50%;
+    height: 100%;
+    background: #f07a13;
+    background-image: linear-gradient(45deg, #f07a13 0%, #f3a300 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+.popup__phone {
+    position: absolute;
+    bottom: -8rem;
+    opacity: 0.7;
+}
+
+.popup__form {
+    width: 50%;
+    height: 100%;
+    background-color: #0a3145;
+    background-image: linear-gradient(-45deg, #541593 0%, #2c1585 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.popup__title {
+    margin: 0;
+    padding: 0 0 1.5rem;
+    text-transform: uppercase;
+}
+
+.form__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+.label {
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+}
+
+.input {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background: #F0EEEE;1
+}
+
+.form__btn-wrapper {
+    margin: 2rem 0 0.5rem;
+}
+
+.popup__btn {
+    color: #fff;
+    border: none;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#f07a13), to(#f3a300));
+    background-image: -o-linear-gradient(bottom, #f07a13 0%, #f3a300 100%);
+    background-image: linear-gradient(to top, #f07a13 0%, #f3a300 100%);
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+}
+
+.popup__btn::before {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.popup__btn:hover {
+    color: #fff;
+    color: #ee8c19;
+    z-index: 0;
+}
+
+.popup__info {
+    font-size: 0.8rem;
+}
+
+.popup__info a {
+    color: #fff;
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
