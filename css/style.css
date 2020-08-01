@@ -51,6 +51,7 @@ body {
 
 .loader {
     height: 100%;
+    background: transparent;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     background-color: #0a3145;
     background-image: linear-gradient(-45deg, #541593 0%, #2c1585 100%);
@@ -71,8 +72,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 18rem;
-    color: #fff;
+    font-size: 6rem;
+    color: #1a1a1a;
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
     mix-blend-mode: difference;
@@ -94,7 +95,7 @@ body {
 }
 
 .logo {
-    /* opacity: 0.2; */
+    opacity: 0.2;
 }
 
 .logo__link {
@@ -395,6 +396,7 @@ body {
 
 .hero__photo-wrapper {
     width: 100%;
+    max-width: 300px;
     max-height: 300px;
     margin: 3rem 0 0;
     text-align: center;
@@ -454,7 +456,6 @@ body {
     width: 100%;
     position: relative;
     z-index: 1;
-    background: yellow;
 }
 .instruction__wrapper {
     width: 100%;
@@ -462,20 +463,19 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: green;
 }
 
 .instruction__title {
     color: #1a1a1a;
-    font-size: 50px;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 49px;
-    margin: 0 0 70px;
+    margin: 3rem 0 0.5rem;
+    text-align: center;
 }
 
 .instruction__boxes {
     width: 100%;
-    max-width: 700px;
     padding: 3rem 0;
     display: flex;
     flex-direction: column;
@@ -486,22 +486,37 @@ body {
 .box {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
-    background: pink;
+}
+
+.box:nth-of-type(2) {
+    flex-direction: column-reverse;
 }
 
 .phone__photo {
+    width: 100%;
+    max-height: 200px;
+}
+
+.phone__photo {
+    width: 100%;
+}
+
+.arrow__wrapper {
     display: none;
 }
 
 .box__text-wrapper {
-    width: 280px;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
 }
 
 .box__header {
+    width: 100%;
     background-image: -webkit-gradient(linear, left bottom, left top, from(#e55b00), to(rgba(229, 91, 0, 0)));
     background-image: -o-linear-gradient(bottom, #e55b00 0%, rgba(229, 91, 0, 0) 100%);
     background-image: linear-gradient(to top, #e55b00 0%, rgba(229, 91, 0, 0) 100%);
@@ -509,7 +524,7 @@ body {
     background-clip: text;
     color: #ff9225;
     font-family: "Love Ya Like A Sister", cursive;
-    font-size: 26px;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 36px;
     display: -webkit-box;
@@ -518,11 +533,12 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    justify-content: center;
     margin: 0;
 }
 
 .box__number {
-    font-size: 70px;
+    font-size: 4.5rem;
     margin-right: 20px;
 }
 
@@ -532,12 +548,24 @@ body {
 
 .box__paragraph {
     color: #4d4d4d;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
     padding: 0;
     margin: 0;
 }
+
+.instruction__bottom-text {
+    background-image: linear-gradient(to top, #e55b00 0%, rgba(229, 91, 0, 0) 100%);
+    background-clip: text;
+    color: #ff9225;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 100px;
+}
+
 
 /* price-list */
 .price-list {
@@ -674,6 +702,9 @@ body {
     width: 65%;
 }
 
+/* login and registration form */
+
+
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     /* header */
@@ -687,12 +718,29 @@ body {
 
     /* hero */
     .hero__photo-wrapper {
+        max-width: 600px;
         max-height: 600px;
     }
+
+    /* instruction */
+    .instruction__boxes {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .box {
+        width: 50%;
+    }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    /* open */
+    .count {
+        font-size: 18rem;
+    }
+
     /* navigation */
     .header__wrapper {
         align-items: flex-start;
@@ -781,6 +829,7 @@ body {
 
     .hero__photo-wrapper {
         width: 40%;
+        max-width: 602px;
         max-height: 886px;
         margin: 0;
         text-align: right;
@@ -791,6 +840,90 @@ body {
     }
 
     .scroll-down__wrapper {
+        display: block;
+    }
+
+    /* instruction */
+    .instruction__title {
+        font-size: 50px;
+        margin: 0 0 70px;
+    }
+
+    .instruction__boxes {
+        padding: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .box {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    .box:nth-of-type(2) {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .phone__photo {
+        width: 100%;
+        max-height: 500px;
+    }
+
+    .box__text-wrapper {
+        width: 340px;
+        text-align: left;
+    }
+
+    .box__text-wrapper--1 {
+        margin: 3rem 0 0 -5rem;
+    }
+
+    .arrow--1 {
+        margin: 20rem 0 0 3rem;
+    }
+
+    .box__text-wrapper--2 {
+        margin: 3rem 0 0 -5rem;
+    }
+
+    .arrow--2 {
+        margin: 20rem 8rem 0 0;
+    }
+
+    .box__text-wrapper--3 {
+        margin: 3rem 0 0 0;
+    }
+
+    .arrow--3 {
+        margin: 20rem 0 0 6rem;
+    }
+
+    .box__text-wrapper--4 {
+        margin: 0 0 0 -4rem;
+    }
+
+    .phone__photo--4 {
+        margin: 10rem 0 0 14rem;
+    }
+
+    .box__header {
+        font-size: 26px;
+        padding-right: 1rem;
+    }
+
+    .box__number {
+        font-size: 70px;
+    }
+
+    .box__paragraph {
+        font-size: 16px;
+    }
+
+    .arrow__wrapper {
         display: block;
     }
 }

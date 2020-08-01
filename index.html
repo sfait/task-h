@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="open">
+    <!-- <div class="open">
         <div class="loader loader-left"></div>
         <div class="loader loader-right"></div>
         <div class="count"></div>
-    </div>
+    </div> -->
     <header class="header">
         <div class="header__wrapper wrapper">
             <h1 class="logo">
@@ -93,7 +93,9 @@
                 <h2 class="instruction__title">Jak to działa?</h2>
                 <div class="instruction__boxes">
                     <div class="box">
-                        <img src="img/iphone1.png" class="phone__photo phone__photo--1" />
+                        <div class="box__photo-wrapper">
+                            <img src="img/iphone1.png" class="phone__photo phone__photo--1" />
+                        </div>
                         <div class="box__text-wrapper box__text-wrapper--1">
                             <h3 class="box__header">
                                 <span class="box__number">1</span>
@@ -106,10 +108,14 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
-                        <img src="img/arrow1.png" class="arrow arrow--1" />
+                        <div class="arrow__wrapper">
+                            <img src="img/arrow1.png" class="arrow arrow--1" />
+                        </div>
                     </div>
                     <div class="box">
-                        <img src="img/arrow2.png" class="arrow arrow--2" />
+                        <div class="arrow__wrapper">
+                            <img src="img/arrow2.png" class="arrow arrow--2" />
+                        </div>
                         <div class="box__text-wrapper box__text-wrapper--2">
                             <h3 class="box__header">
                                 <span class="box__number">2</span>
@@ -122,10 +128,14 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
-                        <img src="img/iphone2.png" class="phone__photo phone__photo--2" />
+                        <div class="box__photo-wrapper">
+                            <img src="img/iphone2.png" class="phone__photo phone__photo--2" />
+                        </div>
                     </div>
                     <div class="box">
-                        <img src="img/iphone3.png" class="phone__photo phone__photo--3" />
+                        <div class="box__photo-wrapper">
+                            <img src="img/iphone3.png" class="phone__photo phone__photo--3" />
+                        </div>
                         <div class="box__text-wrapper box__text-wrapper--3">
                             <h3 class="box__header">
                                 <span class="box__number">3</span>
@@ -138,10 +148,14 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
-                        <img src="img/arrow3.png" class="arrow arrow--3" />
+                        <div class="arrow__wrapper">
+                            <img src="img/arrow3.png" class="arrow arrow--3" />
+                        </div>
                     </div>
                     <div class="box">
-                        <img src="img/iphone4.png" class="phone__photo phone__photo--4" />
+                        <div class="box__photo-wrapper">
+                            <img src="img/iphone4.png" class="phone__photo phone__photo--4" />
+                        </div>
                         <div class="box__text-wrapper box__text-wrapper--4">
                             <h3 class="box__header">
                                 <span class="box__number">4</span>
@@ -156,6 +170,9 @@
                         </div>
                     </div>
                 </div>
+                <p class="instruction__bottom-text">
+                    Lorem ipsum!
+                </p>
             </div>
         </section>
         <section class="price-list">
