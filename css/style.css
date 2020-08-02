@@ -833,7 +833,7 @@ html, body {
 }
 
 .join__wrapper {
-    margin: 5rem 0 2rem;
+    margin: 5rem 0 2.5rem;
 }
 
 .join__title {
@@ -1450,7 +1450,7 @@ html, body {
     }
 
     .phone__photo--4 {
-        margin: 12rem 0 0 26rem;
+        margin: 12rem 0 0 20rem;
     }
 
     .box__header {
@@ -1491,10 +1491,6 @@ html, body {
         -webkit-box-align: start;
         -ms-flex-align: start;align-items:
         flex-start;
-    }
-
-    .price-list__box {
-        min-height: 900px;
     }
 
     .price-list__left-box {

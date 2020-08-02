@@ -88,7 +88,7 @@ function showPopupRegister() {
 }
 
 const init = function() {
-    showPage();
+    // showPage();
     changeTitle();
     showHamburgerMenu();
     showPopupLogin();
