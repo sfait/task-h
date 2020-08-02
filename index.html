@@ -49,10 +49,10 @@
                             <span class="navigation__span"></span>
                         </li>
                         <li class="navigation__item navigation__item--hover">
-                            <span class="cursor">Logowanie</span>
+                            <span class="cursor login">Logowanie</span>
                         </li>
                         <li class="navigation__item navigation__item--hover">
-                            <span class="cursor">Rejestracja</span>
+                            <span class="cursor register">Rejestracja</span>
                         </li>
                     </ul>
                 </div>
@@ -97,7 +97,7 @@
                 <div class="instruction__boxes">
                     <div class="box">
                         <div class="box__photo-wrapper">
-                            <img src="img/iphone1.png" alt="iPhone" class="phone__photo phone__photo--1" />
+                            <img src="img/iphone1.png" alt="iPhone" class="phone__photo phone__photo--1" height="500" />
                         </div>
                         <div class="box__text-wrapper box__text-wrapper--1">
                             <h3 class="box__header">
@@ -132,12 +132,12 @@
                             </p>
                         </div>
                         <div class="box__photo-wrapper">
-                            <img src="img/iphone2.png" alt="iPhone" class="phone__photo phone__photo--2" />
+                            <img src="img/iphone2.png" alt="iPhone" class="phone__photo phone__photo--2" height="500" />
                         </div>
                     </div>
                     <div class="box">
                         <div class="box__photo-wrapper">
-                            <img src="img/iphone3.png" alt="iPhone" class="phone__photo phone__photo--3" />
+                            <img src="img/iphone3.png" alt="iPhone" class="phone__photo phone__photo--3" height="500" />
                         </div>
                         <div class="box__text-wrapper box__text-wrapper--3">
                             <h3 class="box__header">
@@ -157,7 +157,7 @@
                     </div>
                     <div class="box">
                         <div class="box__photo-wrapper">
-                            <img src="img/iphone4.png" alt="iPhone" class="phone__photo phone__photo--4" />
+                            <img src="img/iphone4.png" alt="iPhone" class="phone__photo phone__photo--4" width="500" />
                         </div>
                         <div class="box__text-wrapper box__text-wrapper--4">
                             <h3 class="box__header">
@@ -272,6 +272,9 @@
                                     </th>
                                 </tr>
                             </thead>
+                            <tr>
+                                <td colspan="100%" class="line"></td>
+                             </tr>
                             <tbody>
                                 <tr>
                                     <th scope="row" class="row__header">Lorem ipsum</th>
@@ -366,16 +369,19 @@
                         <div class="register-buttons__wrapper">
                             <h3 class="register-buttons__title">Zarejestruj się i wypróbuj!</h3>
                             <div class="register-buttons">
-                                <button class="register-btn register-btn--first">Rejestracja</button>
-                                <button class="register-btn register-btn--second">Logowanie</button>
+                                <button class="register-btn register-btn--first register">Rejestracja</button>
+                                <button class="register-btn register-btn--second login">Logowanie</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- <div class="popup">
+        <div class="popup popup--login">
             <div class="popup__wrapper wrapper">
+                <div class="close">
+                    <span class="fas fa-times close__span"></span>
+                </div>
                 <div class="popup__photo">
                     <img src="img/iphone1.png" alt="iPhone" class="popup__phone" />
                 </div>
@@ -392,12 +398,14 @@
                     <div class="form__btn-wrapper">
                         <button type="submit" class="btn popup__btn">Zaloguj</button>
                     </div>
-                    <p class="popup__info">
-                        Nie masz konta? <a href="#">Zarejestruj się</a>
-                    </p>
                 </form>
             </div>
+        </div>
+        <div class="popup popup--register">
             <div class="popup__wrapper wrapper">
+                <div class="close">
+                    <span class="fas fa-times close__span"></span>
+                </div>
                 <form class="popup__form">
                     <h2 class="popup__title">Rejestracja</h2>
                     <div class="form__input-wrapper">
@@ -419,15 +427,12 @@
                     <div class="form__btn-wrapper">
                         <button type="submit" class="btn popup__btn">Zarejestruj</button>
                     </div>
-                    <p class="popup__info">
-                        Masz konto? <a href="#">Zaloguj się</a>
-                    </p>
                 </form>
                 <div class="popup__photo">
                     <img src="img/iphone2.png" alt="iPhone" class="popup__phone" />
                 </div>
             </div>
-        </div> -->
+        </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>

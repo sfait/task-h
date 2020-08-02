@@ -53,10 +53,47 @@ function showHamburgerMenu() {
     hamburger.addEventListener("click", handleClick);
 }
 
+function showPopupLogin() {
+    $(".login").on('click', function(e) {
+        e.preventDefault();
+        $(".popup--login").show();
+    });
+
+    $(".close").on('click', function(e) {
+        e.preventDefault();
+        $(".popup--login").hide();
+        window.history.back();
+    });
+
+    if(window.location.hash == "#login") {
+        $(".popup--login").show();
+    }
+}
+
+function showPopupRegister() {
+    $(".register").on('click', function(e) {
+        e.preventDefault();
+        $(".popup--register").show();
+    });
+
+    $(".close").on('click', function(e) {
+        e.preventDefault();
+        $(".popup--register").hide();
+        window.history.back();
+    });
+
+    if(window.location.hash == "#register") {
+        $(".popup--register").show();
+    }
+}
+
+
 const init = function() {
     showPage();
     changeTitle();
     showHamburgerMenu();
+    showPopupLogin();
+    showPopupRegister();
 };
 
 document.addEventListener("DOMContentLoaded", init);

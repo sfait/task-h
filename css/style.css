@@ -604,12 +604,7 @@ html, body {
 }
 
 .phone__photo {
-    width: auto;
     display: none;
-}
-
-.phone__photo {
-    width: 100%;
 }
 
 .arrow__wrapper {
@@ -862,14 +857,10 @@ html, body {
     position: relative;
 }
 
-.thead::before {
-    content: "";
+.line {
     width: 100%;
     height: 1px;
-    border-bottom: 1px solid #f5b035;
-    position: absolute;
-    left: 0;
-    bottom: 15px;
+    background: #f5b035;
 }
 
 .plan {
@@ -904,7 +895,6 @@ html, body {
 }
 
 .plan__choose {
-    width: 130px;
     height: 30px;
     border: 1px solid #0a3145;
     border-radius: 5px;
@@ -1069,9 +1059,26 @@ html, body {
     z-index: 4;
 }
 
+.popup--login {
+    display: none;
+}
+
+.show--login {
+    display: block;
+}
+
+.popup--register {
+    display: none;
+}
+
+.show--register {
+    display: block;
+}
+
 .popup__wrapper {
     max-width: 800px;
     height: 600px;
+    margin-top: 0.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1083,11 +1090,20 @@ html, body {
     justify-content: center;
     -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    position: relative;
 }
-/*
-.popup--active {
-    display: block;
-} */
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.close__span {
+    font-size: 2.5rem;
+}
 
 .popup__photo {
     width: 50%;
@@ -1097,6 +1113,7 @@ html, body {
     background-image: linear-gradient(45deg, #f07a13 0%, #f3a300 100%);
     overflow: hidden;
     position: relative;
+    display: none;
 }
 
 .popup__phone {
@@ -1106,7 +1123,7 @@ html, body {
 }
 
 .popup__form {
-    width: 50%;
+    width: 100%;
     height: 100%;
     background-color: #0a3145;
     background-image: -o-linear-gradient(135deg, #541593 0%, #2c1585 100%);
@@ -1181,14 +1198,6 @@ html, body {
     color: #fff;
     color: #ee8c19;
     z-index: 0;
-}
-
-.popup__info {
-    font-size: 0.8rem;
-}
-
-.popup__info a {
-    color: #fff;
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -1403,7 +1412,6 @@ html, body {
     }
 
     .phone__photo {
-        width: 100%;
         display: block;
     }
 
@@ -1413,7 +1421,7 @@ html, body {
     }
 
     .box__text-wrapper--1 {
-        margin: 3rem 0 0 -5rem;
+        margin: 1rem 0 0 -5rem;
     }
 
     .arrow--1 {
@@ -1421,7 +1429,7 @@ html, body {
     }
 
     .box__text-wrapper--2 {
-        margin: 3rem 0 0 -5rem;
+        margin: 5rem 0 0 -5rem;
     }
 
     .arrow--2 {
@@ -1441,8 +1449,7 @@ html, body {
     }
 
     .phone__photo--4 {
-        width: 70%;
-        margin: 12rem 0 0 20rem;
+        margin: 12rem 0 0 26rem;
     }
 
     .box__header {
@@ -1507,7 +1514,20 @@ html, body {
         font-size: 20px;
     }
 
+    .plan__choose {
+        width: 130px;
+    }
+
     .plan__price {
         font-size: 26px;
+    }
+
+    /* popup */
+    .popup__photo {
+    	display: block;
+    }
+
+    .popup__form {
+        width: 50%;
     }
 }
