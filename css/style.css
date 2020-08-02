@@ -34,6 +34,7 @@ html, body {
 }
 
 /* open */
+/* open */
 .open {
     width: 100%;
     height: 100vh;
@@ -1487,6 +1488,13 @@ html, body {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-align: start;
+        -ms-flex-align: start;align-items:
+        flex-start;
+    }
+
+    .price-list__box {
+        min-height: 900px;
     }
 
     .price-list__left-box {

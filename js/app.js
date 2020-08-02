@@ -87,7 +87,6 @@ function showPopupRegister() {
     }
 }
 
-
 const init = function() {
     showPage();
     changeTitle();
